@@ -128,7 +128,7 @@
 
             <div class="section-header-div">
                 <span class="header-span">Heavy Weight</span>
-                <a routerLink="/app/all-products">View all ></a>
+                <a routerLink="/app/all-products" class="redirect-link">View all ></a>
             </div>
     
             <div class="product-list-container">
@@ -169,6 +169,33 @@
                     </div>
                 </div>
     
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="cta-section" class="content-section">
+
+        <div class="section-container">
+
+            <div class="image-side"></div>
+
+            <div class="content-side">
+                <div class="content-container">
+                    <span class="content-small-header">GET EARLY ACCESS</span>
+                    <span class="content-main-header">
+                        Join Our Community
+                    </span>
+                    <span class="inner-content-para">
+                        Subscribe for early access to launches, promos and events.
+                    </span>
+
+                    <form method="post" action="/subscribe/mail-list" class="mail-form">
+                        <input type="email" class="mail-inp" name="email" id="email-id" placeholder="Enter your email">
+                        <button type="submit" class="black-button">Join</button>
+                    </form>
+                </div>
             </div>
 
         </div>
