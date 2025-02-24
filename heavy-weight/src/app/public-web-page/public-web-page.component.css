@@ -165,11 +165,142 @@
 
 /* HEAVY WEIGHT COLLECTION */
 
+#heavy-weight-collection-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+#heavy-weight-collection-section .section-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.section-header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redirect-link {
+    color: #000000;
+    font-weight: 400;
+}
 
 /* HEAVY WEIGHT COLLECTION */
 
+/* CALL TO ACTION SECTION */
+
+#cta-section {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    min-height: 50vh;
+}
+
+#cta-section .section-container {
+    display: grid;
+    width: 100%;
+    max-width: 900px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "a b";
+    gap: 10px
+}
+
+.image-side {
+    background-color: #000000;
+    height: 500px;
+    width: 100%;
+}
+
+.content-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px
+}
+
+.content-side .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.content-small-header, .content-main-header, .inner-content-para {
+    color: #000000;
+}
+
+.content-small-header {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.content-main-header {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.inner-content-para {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* CALL TO ACTION SECTION */
+
 @media (max-width: 700px) {
     /* RECOMMENDED SECTION */
-    
+    #hero-section {
+        background-color: brown;
+        padding: 10px;    
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        width: 100vw;
+    }
     /* RECOMMENDED SECTION */
+
+    .product-list-container {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent items from wrapping */
+        scrollbar-width: thin;
+        /* Hide scrollbar */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE & Edge */
+    }
+
+    .product {
+        width: 100%;
+    }
+    
+    #cta-section .section-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-side {
+        background-color: #000000;
+        height: 400px;
+        width: 100%;
+    }
+    
+    .content-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px
+    }
+    
 }

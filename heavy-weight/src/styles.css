@@ -26,6 +26,10 @@ body::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 :root {
     --pops: "Poppins", sans-serif;
     --nuns: "Nunito", sans-serif;
@@ -44,6 +48,8 @@ body {
     position: relative;    
     font-family: var(--pops);
     overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 /* BUTTON STYLES */
