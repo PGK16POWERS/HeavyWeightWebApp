@@ -6,6 +6,11 @@ import { SignUpComponent } from './security/sign-up/sign-up.component';
 
 const routes: Routes = [
   {
+    title: 'Heavy Weight | Home Page',
+    path: '',
+    component: PublicWebPageComponent
+  },
+  {
     title:'Heavy Weight | Home Page',
     path: 'home',
     component: PublicWebPageComponent 
