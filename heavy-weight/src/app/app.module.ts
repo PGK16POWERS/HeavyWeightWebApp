@@ -10,6 +10,7 @@ import { PublicWebPageComponent } from './public-web-page/public-web-page.compon
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './security/login/login.component';
 import { SignUpComponent } from './security/sign-up/sign-up.component';
+import { HeaderComponent } from './public-web-page/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SignUpComponent } from './security/sign-up/sign-up.component';
     MainComponent,
     LoginComponent,
     SignUpComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
