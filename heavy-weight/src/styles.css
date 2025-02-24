@@ -52,20 +52,24 @@ button {
     position: relative;
     cursor: pointer;
     border: 0 solid transparent;
-    border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0;
-    font-weight: 400;
-    height: 60px;
-    width: 100%;
-    max-width: 500px;
-    color: #ffffff;
+    font-weight: 500;
+    height: 50px;
+    max-width: 350px;
     overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
-.primary-button {
-    position: relative;
-    background-color: var(--primary-blue);
+.white-button {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.black-button {
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 .disabled-button {
