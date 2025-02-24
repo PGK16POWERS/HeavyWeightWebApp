@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+}
+
+a, li {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Hide the default arrow */
+select {
+    background: transparent; /* Make background transparent */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Custom arrow (if needed) */
+select::-ms-expand {
+    display: none; /* For Internet Explorer */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+:root {
+    --pops: "Poppins", sans-serif;
+    --nuns: "Nunito", sans-serif;
+    --monts: "Montserrat", sans-serif;
+    --prompt: "Prompt", sans-serif;
+    --sans: "Nunito Sans", sans-serif;
+    --dominant-color: #000000;
+    --primary-blue: #0057FF;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    position: relative;    
+    font-family: var(--pops);
+    overflow-x: hidden;
+}
+
+/* BUTTON STYLES */
+
+button {
+    position: relative;
+    cursor: pointer;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: 400;
+    height: 60px;
+    width: 100%;
+    max-width: 500px;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.primary-button {
+    position: relative;
+    background-color: var(--primary-blue);
+}
+
+.disabled-button {
+    background-color: var(--dominant-color);
+    animation: none !important;
+}
+
+.tertiary-button {
+    background-color: #EEEEEE;
+    color: #A7A7A7;
+}
+
+button:disabled {
+    background-color: var(--dominant-color);
+}
+
+/* BUTTON STYLES */
