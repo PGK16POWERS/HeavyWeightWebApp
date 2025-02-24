@@ -58,8 +58,9 @@ button {
     height: 50px;
     max-width: 350px;
     overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .white-button {

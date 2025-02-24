@@ -1,7 +1,12 @@
 .news-header {
-    background-color: #DC0C00;
+    background-color: #fd1d12;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+span {
+    color: white;
+    font-size: 12px;
 }
