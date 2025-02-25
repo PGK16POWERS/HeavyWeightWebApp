@@ -45,6 +45,11 @@
     margin-top: 16px;
 }
 
+.section-container {
+    max-width: 900px;
+    width: 100%;
+}
+
 /* RECOMMENDED SECTION */
 
 #most-liked-pieces-section {
@@ -55,8 +60,6 @@
 }
 
 #most-liked-pieces-section .section-container {
-    max-width: 900px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -270,6 +273,29 @@
 }
 
 /* CALL TO ACTION SECTION */
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.footer-top-half {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-redirect-links-container nav ul {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
 
 @media (max-width: 700px) {
     /* RECOMMENDED SECTION */
