@@ -1,1 +1,20 @@
-<p>sign-up works!</p>
+<section id="main-security-frame">
+    <div class="container">
+
+        <form class="form" #createAccountForm="ngForm" (ngSubmit)="createAccountFunc()" novalidate>
+            <span class="form-header">CREATE ACCOUNT</span>
+
+            <div class="inp-field-parent">
+                <input type="email" name="email" class="inp-field" id="email-input-field" [(ngModel)]="NewUserData.email" #emailInp="ngModel" required placeholder="Email address" inputmode="email" autocomplete="email" email>
+                <input type="password" name="password" class="inp-field" id="password-inpu-field" [(ngModel)]="NewUserData.password" #passwordInp="ngModel" required placeholder="Password" autocomplete="current-password">
+                <input type="text" name="first_name" class="inp-field" required placeholder="First name" [(ngModel)]="NewUserData.first_name" #firstNameInp="ngModel" autocomplete="name">
+                <input type="text" name="last_name" class="inp-field" required placeholder="Last name" [(ngModel)]="NewUserData.last_name" #lastNameInp="ngModel" autocomplete="family-name" >
+            </div>
+
+            <button type="submit" class="standard-black-btn">CREATE ACCOUNT</button>
+
+            <span (click)="redirectFunc()" class="form-redirect-link">Login instead?</span>
+        </form>
+
+    </div>
+</section>

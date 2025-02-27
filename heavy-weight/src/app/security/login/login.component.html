@@ -1,1 +1,22 @@
-<p>login works!</p>
+<section id="main-security-frame">
+    <div class="container">
+
+        <form class="form" #loginForm="ngForm" (ngSubmit)="loginFunc()" novalidate>
+            <span class="form-header">LOGIN</span>
+
+            <div class="inp-field-parent">
+                <input type="email" name="email" class="inp-field" id="email-input-field" [(ngModel)]="UserData.email" #inp="ngModel" required placeholder="Email address" inputmode="email" autocomplete="email" email>
+                <input type="password" name="password" class="inp-field" id="password-inpu-field" [(ngModel)]="UserData.password" #inp="ngModel" required placeholder="Password" autocomplete="current-password">
+            </div>
+
+            <div class="fg-p-div">
+                <span class="forgot-password-link">Forgot password?</span>
+            </div>
+
+            <button type="submit" class="standard-black-btn">LOGIN</button>
+
+            <span (click)="redirectFunc()" class="form-redirect-link">Not signed up? <span style="color: #000000; font-weight: 500;">Create account.</span></span>
+        </form>
+
+    </div>
+</section>
