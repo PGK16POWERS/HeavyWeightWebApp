@@ -2,7 +2,7 @@
     <div class="container">
 
         <form class="form" #createAccountForm="ngForm" (ngSubmit)="createAccountFunc()" novalidate>
-            <span class="form-header">CREATE ACCOUNT</span>
+            <span class="form-header">Create account</span>
 
             <div class="inp-field-parent">
                 <input type="email" name="email" class="inp-field" id="email-input-field" [(ngModel)]="NewUserData.email" #emailInp="ngModel" required placeholder="Email address" inputmode="email" autocomplete="email" email>
