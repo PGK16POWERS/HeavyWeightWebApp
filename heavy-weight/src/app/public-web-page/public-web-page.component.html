@@ -7,7 +7,7 @@
             <span class="hero-header" id="category">Shirts</span>
             <div class="btn-div">
                 <button type="button" class="white-button">Shop Now</button>
-                <button type="button" class="black-button">Learn More</button>
+                <button type="button" class="standard-black-btn">Learn More</button>
             </div>
         </div>
 
@@ -116,7 +116,7 @@
             <span class="content-para">Marjella's Touch brought to life by Heavy Weight.</span>
             <div class="btn-div">
                 <button type="button" class="white-button">Shop Now</button>
-                <button type="button" class="black-button">Collaborate</button>
+                <button type="button" class="standard-black-btn">Collaborate</button>
             </div>
         </div>
 
@@ -191,9 +191,9 @@
                         Subscribe for early access to launches, promos and events.
                     </span>
 
-                    <form method="post" action="/subscribe/mail-list" class="mail-form">
-                        <input type="email" class="mail-inp" name="email" id="email-id" placeholder="Enter your email">
-                        <button type="submit" class="black-button">Join</button>
+                    <form #newsletter="ngForm" (ngSubmit)="subscribeNewsletter()" method="post" action="/subscribe/mail-list" class="mail-form">
+                        <input type="email" class="mail-inp" name="email" id="email-id" [(ngModel)]="newsletterModel.email" email #emailInp="ngModel" placeholder="Enter your email">
+                        <button type="submit" class="standard-black-btn" [disabled]="!newsletter.invalid">Join</button>
                     </form>
                 </div>
             </div>
@@ -201,44 +201,5 @@
         </div>
 
     </section>
-
-    <footer>
-
-        <div class="section-container">
-
-            <div class="footer-top-half">
-                <div class="brand-logo-container"></div>
-                <div class="footer-redirect-links-container">
-                    <nav>
-                        <ul>
-                            <li>
-                                <a routerLink="/" class="nav-link">About</a>
-                            </li>
-                            <li>
-                                <a routerLink="/" class="nav-link">Subscribe</a>
-                            </li>
-                            <li>
-                                <a routerLink="/" class="nav-link">Delivery rates</a>
-                            </li>
-                            <li>
-                                <a routerLink="/" class="nav-link">Policies</a>
-                            </li>
-                            <li>
-                                <a routerLink="/" class="nav-link">Affiliate program</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-
-            <div class="footer-divider"></div>
-
-            <div class="footer-bottom-half">
-                <span class="copyright-span">Copyright © 2025 Heavy Weight (Pty). All rights reserved</span>
-            </div>
-
-        </div>
-
-    </footer>
 
 </section>
