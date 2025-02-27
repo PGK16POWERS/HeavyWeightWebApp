@@ -22,7 +22,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .nav-link-container {
@@ -32,7 +32,7 @@ header {
 .nav-link-container nav ul {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 16px;
 }
 
 .link-icons {
@@ -41,15 +41,26 @@ header {
     align-items: center;
 }
 
-#search_icon {
-    display: flex;
+.link-icon {
+    width: 25px;
 }
 
 #menu_icon {
     display: none;
 }
 
-@media (max-width: 800px) {
+.nav-link {
+    color: #b4b4b4;
+    transition-duration: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: #FFFFFF;
+}
+
+
+@media (max-width: 700px) {
     .nav-link-container {
         display: none
     }

@@ -59,7 +59,7 @@ body {
 .nav-link {
     font-size: 12px;
     font-weight: 400;
-    color: #737373;
+    color: #F7F7F7;
 }
 
 /* BUTTON STYLES */
@@ -71,7 +71,7 @@ button {
     font-size: 14px;
     letter-spacing: 0;
     font-weight: 500;
-    height: 60px;
+    height: 55px;
     max-width: 350px;
     overflow: hidden;
     text-align: center;
@@ -87,11 +87,10 @@ button {
 .standard-black-btn {
     background-color: #000000;
     color: #FFFFFF;
-    width: 100%;
 }
 
-.disabled-button {
-    background-color: var(--dominant-color);
+button:disabled {
+    background-color: #737373;
     animation: none !important;
 }
 
@@ -168,12 +167,6 @@ input:focus {
     cursor: pointer;
 }
 
-@media (max-width: 700px) {
-    .form-header {
-        font-size: 18px;
-    }
-}
-
 /* FORM STYLES || SECURITY PAGE */
 
 
@@ -186,12 +179,14 @@ footer {
     align-items: center;
     background-color: #000000;
     margin-top: 40px;
+    width: 100%;
 }
 
 footer .section-container {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
 }
 
 .footer-top-half {
@@ -221,6 +216,9 @@ footer .section-container {
 }
 
 @media (max-width: 700px) {
+    .form-header {
+        font-size: 18px;
+    }
     /* FOOTER */
 
     footer {
@@ -244,10 +242,8 @@ footer .section-container {
         align-items: start;
     }
 
-    .nav-link {
-        font-size: 14px;
-        font-weight: 400;
-        color: #737373;
+    .copyright-span {
+        font-size: 8px;
     }
 
     /* FOOTER */
