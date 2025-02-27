@@ -17,12 +17,12 @@ const routes: Routes = [
   },
   {
     title: 'Heavy Weight | Login',
-    path: 'security/login',
+    path: 'security/auth/login',
     component: LoginComponent
   },
   {
-    title: 'Heavy Weight | Sign-up',
-    path: 'security/sign-up',
+    title: 'Heavy Weight | Create account',
+    path: 'security/auth/create-account',
     component: SignUpComponent
   }
 ];
