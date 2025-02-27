@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-public-web-page',
@@ -6,6 +6,18 @@ import { Component } from '@angular/core';
   templateUrl: './public-web-page.component.html',
   styleUrl: './public-web-page.component.css'
 })
-export class PublicWebPageComponent {
+export class PublicWebPageComponent implements OnInit {
+
+  newsletterModel = {
+    email: ''
+  }
+
+  ngOnInit(): void {
+      
+  }
+
+  async subscribeNewsletter() {
+
+  }
 
 }
