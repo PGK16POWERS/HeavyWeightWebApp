@@ -1,0 +1,31 @@
+.inp-field-parent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.fg-p-div {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.forgot-password-link {
+    color: #8e8e8e;
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.forgot-password-link:active,
+.forgot-password-link:focus,
+.forgot-password-link:hover {
+    color: #000000;
+}
+
+.standard-black-btn {
+    margin-top: 8px;
+}

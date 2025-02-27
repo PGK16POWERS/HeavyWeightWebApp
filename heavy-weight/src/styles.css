@@ -4,6 +4,10 @@
    box-sizing: border-box; 
 }
 
+a, button {
+    cursor: pointer;
+}
+
 a, li {
     text-decoration: none;
     list-style: none;
@@ -80,9 +84,10 @@ button {
     color: #000000;
 }
 
-.black-button {
+.standard-black-btn {
     background-color: #000000;
     color: #FFFFFF;
+    width: 100%;
 }
 
 .disabled-button {
@@ -100,3 +105,66 @@ button:disabled {
 }
 
 /* BUTTON STYLES */
+
+/* FORM STYLES || SECURITY PAGE */
+
+.form {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.form-header {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+
+#main-security-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 100vw;
+    min-height: 100%;
+    height: 90vh;
+}
+
+#main-security-frame .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+}
+
+input {
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    height: 60px;
+    padding: 0 13px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
+
+input:active,
+input:focus {
+    outline: 2px solid #000000;
+}
+
+.form-redirect-link {
+    color: #8e8e8e;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+/* FORM STYLES || SECURITY PAGE */

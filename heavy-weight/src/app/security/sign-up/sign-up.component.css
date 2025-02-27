@@ -1,0 +1,10 @@
+.inp-field-parent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.standard-black-btn {
+    margin-top: 10px;
+}
