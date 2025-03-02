@@ -49,6 +49,14 @@ header {
     display: none;
 }
 
+#cart_icon { 
+    display: none;
+}
+
+#user_icon {
+    display: none;
+}
+
 .nav-link {
     color: #b4b4b4;
     transition-duration: 0.3s;
