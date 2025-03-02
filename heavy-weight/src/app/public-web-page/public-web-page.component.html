@@ -1,12 +1,14 @@
 <section class="parent-content-section">
 
+    <app-header></app-header>
+
     <section id="hero-section" class="content-section">
 
         <div class="main-hero-content">
             <span class="small-hero-header">New Arrivals</span>
             <span class="hero-header" id="category">Shirts</span>
             <div class="btn-div">
-                <button type="button" class="white-button">Shop Now</button>
+                <button type="button" class="white-button" (click)="redirectToShop()">Shop Now</button>
                 <button type="button" class="standard-black-btn">Learn More</button>
             </div>
         </div>
