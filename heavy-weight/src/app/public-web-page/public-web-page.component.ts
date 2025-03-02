@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-public-web-page',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './public-web-page.component.css'
 })
 export class PublicWebPageComponent implements OnInit {
+
+  constructor(private router: Router) {}
 
   newsletterModel = {
     email: ''
@@ -18,6 +22,10 @@ export class PublicWebPageComponent implements OnInit {
 
   async subscribeNewsletter() {
 
+  }
+
+  redirectToShop() {
+    this.router.navigateByUrl("/auth/shop")
   }
 
 }
