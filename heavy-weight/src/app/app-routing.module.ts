@@ -31,7 +31,6 @@ const routes: Routes = [
     title: 'Heavy Weight | Home',
     path: 'auth/shop',
     component: MainComponent,
-    canActivate: [authGuard]
    }
 ];
 

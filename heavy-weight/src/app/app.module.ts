@@ -12,6 +12,7 @@ import { LoginComponent } from './security/login/login.component';
 import { SignUpComponent } from './security/sign-up/sign-up.component';
 import { HeaderComponent } from './public-web-page/header/header.component';
 import { ForgotPasswordComponent } from './security/login/forgot-password/forgot-password.component';
+import { AppHeaderComponent } from './main/app-header/app-header.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ForgotPasswordComponent } from './security/login/forgot-password/forgot
     SignUpComponent,
     HeaderComponent,
     ForgotPasswordComponent,
+    AppHeaderComponent,
   ],
   imports: [
     BrowserModule,
