@@ -143,21 +143,16 @@ button:disabled {
 
 #main-security-frame {
     display: flex;
-    padding: 25px 0;
-    justify-content: center;
-    align-items: center;
     background-color: #ffffff;
     width: 100vw;
-    min-height: 100%;
-    height: 100%;
 }
 
 #main-security-frame .container {
-    position: relative;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     width: 100vw;
-    max-width: 1200px;
+    max-width: 900px;
     padding: 0 1.5rem;
     gap: 1.5rem;
 }
