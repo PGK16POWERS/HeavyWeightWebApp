@@ -16,6 +16,7 @@ import { AppHeaderComponent } from './main/app-header/app-header.component';
 import { AboutComponent } from './public-web-page/about/about.component';
 import { CheckoutComponent } from './public-web-page/checkout/checkout.component';
 import { FeaturesComponent } from './public-web-page/features/features.component';
+import { SaleComponent } from './public-web-page/sale/sale.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FeaturesComponent } from './public-web-page/features/features.component
     AboutComponent,
     CheckoutComponent,
     FeaturesComponent,
+    SaleComponent,
   ],
   imports: [
     BrowserModule,
