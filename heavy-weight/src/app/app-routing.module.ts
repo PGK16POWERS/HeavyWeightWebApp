@@ -7,6 +7,9 @@ import { MainComponent } from './main/main.component';
 import { authGuard } from './auth.guard';
 import { AboutComponent } from './public-web-page/about/about.component';
 import { CheckoutComponent } from './public-web-page/checkout/checkout.component';
+import { FeaturesComponent } from './public-web-page/features/features.component';
+
+const userId = 12342341234134;
 
 const routes: Routes = [
   {
@@ -36,13 +39,18 @@ const routes: Routes = [
   },
    {
     title: 'Heavy Weight | Home',
-    path: 'auth/shop',
+    path: `auth/user:${userId}/shop`,
     component: MainComponent,
    },
    {
     title: 'Heavy Weight | checkout',
-    path: 'auth/checkout',
+    path: `auth/userid:${userId}/checkout`,
     component: CheckoutComponent,
+   },
+   {
+    title: 'Heavy Weight | Features',
+    path: `auth/userId:${userId}/Features`,
+    component: FeaturesComponent,
    }
 ];
 
