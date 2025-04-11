@@ -5,6 +5,8 @@ import { LoginComponent } from './security/login/login.component';
 import { SignUpComponent } from './security/sign-up/sign-up.component';
 import { MainComponent } from './main/main.component';
 import { authGuard } from './auth.guard';
+import { AboutComponent } from './public-web-page/about/about.component';
+import { CheckoutComponent } from './public-web-page/checkout/checkout.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,11 @@ const routes: Routes = [
     title:'Heavy Weight | Home Page',
     path: 'home',
     component: PublicWebPageComponent 
+  },
+  {
+    title:'Heavy Weight | About',
+    path: 'about',
+    component: AboutComponent
   },
   {
     title: 'Heavy Weight | Login',
@@ -31,6 +38,11 @@ const routes: Routes = [
     title: 'Heavy Weight | Home',
     path: 'auth/shop',
     component: MainComponent,
+   },
+   {
+    title: 'Heavy Weight | checkout',
+    path: 'auth/checkout',
+    component: CheckoutComponent,
    }
 ];
 

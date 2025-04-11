@@ -13,6 +13,9 @@ import { SignUpComponent } from './security/sign-up/sign-up.component';
 import { HeaderComponent } from './public-web-page/header/header.component';
 import { ForgotPasswordComponent } from './security/login/forgot-password/forgot-password.component';
 import { AppHeaderComponent } from './main/app-header/app-header.component';
+import { AboutComponent } from './public-web-page/about/about.component';
+import { CheckoutComponent } from './public-web-page/checkout/checkout.component';
+import { FeaturesComponent } from './public-web-page/features/features.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { AppHeaderComponent } from './main/app-header/app-header.component';
     HeaderComponent,
     ForgotPasswordComponent,
     AppHeaderComponent,
+    AboutComponent,
+    CheckoutComponent,
+    FeaturesComponent,
   ],
   imports: [
     BrowserModule,
