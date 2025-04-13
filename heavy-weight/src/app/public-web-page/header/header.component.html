@@ -20,7 +20,7 @@
                         <a routerLink="/" class="nav-link">New Arrivals</a>
                     </li>
                     <li>
-                        <a routerLink="/" class="nav-link">Features</a>
+                        <a [routerLink]="['/auth/user/', userId, 'features']" class="nav-link">Features</a>
                     </li>
                     <li>
                         <a routerLink="/" class="nav-link">Shop</a>
