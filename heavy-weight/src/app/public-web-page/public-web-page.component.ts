@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-public-web-page',
@@ -17,7 +17,7 @@ export class PublicWebPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      
+      const userId = 161616
   }
 
   async subscribeNewsletter() {
