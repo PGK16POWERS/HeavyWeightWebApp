@@ -18,6 +18,8 @@ import { CheckoutComponent } from './main/checkout/checkout.component';
 import { FeaturesComponent } from './public-web-page/features/features.component';
 import { SaleComponent } from './main/sale/sale.component';
 import { BestSellersComponent } from './main/best-sellers/best-sellers.component';
+import { CartComponent } from './main/cart/cart.component';
+import { ProductDisplayComponent } from './main/product-display/product-display.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { BestSellersComponent } from './main/best-sellers/best-sellers.component
     CheckoutComponent,
     SaleComponent,
     BestSellersComponent,
+    CartComponent,
+    ProductDisplayComponent,
   ],
   imports: [
     BrowserModule,

@@ -38,29 +38,37 @@ const routes: Routes = [
     path: 'security/auth/create-account',
     component: SignUpComponent
   },
+
+
+  // USER AUTH REDIRECTS 
    {
     title: 'Heavy Weight | Home',
-    path: `auth/user/:userId/shop`,
+    path: `auth/user/shop`,
     component: MainComponent,
    },
    {
     title: 'Heavy Weight | Checkout',
-    path: `auth/user/:userId/checkout`,
+    path: `auth/user/checkout`,
     component: CheckoutComponent,
    },
    {
     title: 'Heavy Weight | Features',
-    path: `auth/user/:userId/features`,
+    path: `auth/user/features`,
     component: FeaturesComponent,
    },
    {
     title: 'Heavy Weight | Sale',
-    path: `auth/userId:${userId}/sale`,
+    path: `auth/user/sale`,
     component: FeaturesComponent,
    },
    {
     title: 'Heavy Weight | Best sellers',
-    path: `auth/userId:${userId}/best-sellers`,
+    path: `auth/user/best-sellers`,
+    component: BestSellersComponent,
+   },
+   {
+    title: 'Heavy Weight | Cart',
+    path: `auth/user/cart`,
     component: BestSellersComponent,
    }
 ];
