@@ -14,9 +14,10 @@ import { HeaderComponent } from './public-web-page/header/header.component';
 import { ForgotPasswordComponent } from './security/login/forgot-password/forgot-password.component';
 import { AppHeaderComponent } from './main/app-header/app-header.component';
 import { AboutComponent } from './public-web-page/about/about.component';
-import { CheckoutComponent } from './public-web-page/checkout/checkout.component';
+import { CheckoutComponent } from './main/checkout/checkout.component';
 import { FeaturesComponent } from './public-web-page/features/features.component';
-import { SaleComponent } from './public-web-page/sale/sale.component';
+import { SaleComponent } from './main/sale/sale.component';
+import { BestSellersComponent } from './main/best-sellers/best-sellers.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +30,10 @@ import { SaleComponent } from './public-web-page/sale/sale.component';
     ForgotPasswordComponent,
     AppHeaderComponent,
     AboutComponent,
-    CheckoutComponent,
     FeaturesComponent,
+    CheckoutComponent,
     SaleComponent,
+    BestSellersComponent,
   ],
   imports: [
     BrowserModule,

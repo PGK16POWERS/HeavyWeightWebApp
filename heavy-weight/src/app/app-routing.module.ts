@@ -6,8 +6,9 @@ import { SignUpComponent } from './security/sign-up/sign-up.component';
 import { MainComponent } from './main/main.component';
 import { authGuard } from './auth.guard';
 import { AboutComponent } from './public-web-page/about/about.component';
-import { CheckoutComponent } from './public-web-page/checkout/checkout.component';
+import { CheckoutComponent } from './main/checkout/checkout.component';
 import { FeaturesComponent } from './public-web-page/features/features.component';
+import { BestSellersComponent } from './main/best-sellers/best-sellers.component';
 
 const userId = 12342341234134;
 
@@ -39,18 +40,28 @@ const routes: Routes = [
   },
    {
     title: 'Heavy Weight | Home',
-    path: `auth/user:${userId}/shop`,
+    path: `auth/user/:userId/shop`,
     component: MainComponent,
    },
    {
-    title: 'Heavy Weight | checkout',
-    path: `auth/userid:${userId}/checkout`,
+    title: 'Heavy Weight | Checkout',
+    path: `auth/user/:userId/checkout`,
     component: CheckoutComponent,
    },
    {
     title: 'Heavy Weight | Features',
-    path: `auth/userId:${userId}/Features`,
+    path: `auth/user/:userId/features`,
     component: FeaturesComponent,
+   },
+   {
+    title: 'Heavy Weight | Sale',
+    path: `auth/userId:${userId}/sale`,
+    component: FeaturesComponent,
+   },
+   {
+    title: 'Heavy Weight | Best sellers',
+    path: `auth/userId:${userId}/best-sellers`,
+    component: BestSellersComponent,
    }
 ];
 
