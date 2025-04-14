@@ -44,7 +44,7 @@ const routes: Routes = [
 
   // USER AUTH REDIRECTS 
    {
-    title: 'Heavy Weight | Home',
+    title: 'Heavy Weight | Shop',
     path: `auth/user/shop`,
     component: MainComponent,
    },
