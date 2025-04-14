@@ -51,6 +51,7 @@
 }
 
 .product-plot {
+    position: relative;
     margin-top: 16px;
     display: flex;
     flex-wrap: wrap;
@@ -91,6 +92,33 @@
 .product-price {
     font-size: 12px;
     font-weight: 600;
+}
+
+.sort-floating-menu {
+    position: absolute;
+    padding: 10px;
+    width: 160px;
+    border: 0 solid transparent;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 4px #2c2b2be7;
+}
+
+.sort-link {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition-duration: 0.05s;
+}
+
+.sort-link:hover,
+.sort-link:active {
+    font-weight: 500;
 }
 
 @media (max-width: 700px) {
