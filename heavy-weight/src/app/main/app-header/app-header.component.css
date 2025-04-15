@@ -3,7 +3,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #000000;
-    padding: 20px;
+    padding: 14px;
     width: 100vw
 }
 
@@ -44,7 +44,15 @@ header {
 
 .link-icon {
     width: 25px;
+    opacity: 70%;
+    cursor: pointer;
+    transition-duration: 0.3s;
 }
+
+.link-icon:hover,
+.link-icon:active {
+    opacity: 100%;
+} 
 
 #menu_icon {
     display: none;
