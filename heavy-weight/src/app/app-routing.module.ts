@@ -11,6 +11,8 @@ import { FeaturesComponent } from './public-web-page/features/features.component
 import { BestSellersComponent } from './main/best-sellers/best-sellers.component';
 import { SaleComponent } from './main/sale/sale.component';
 import { CartComponent } from './main/cart/cart.component';
+import { NewArrivalsComponent } from './main/new-arrivals/new-arrivals.component';
+import { AccountComponent } from './main/account/account.component';
 
 const userId = 12342341234134;
 
@@ -72,6 +74,16 @@ const routes: Routes = [
     title: 'Heavy Weight | Cart',
     path: `auth/user/cart`,
     component: CartComponent,
+   },
+   {
+    title: 'Heavy Weight | New Arrival',
+    path: `auth/user/new-arrival`,
+    component: NewArrivalsComponent,
+   },
+   {
+    title: 'Heavy Weight | Account',
+    path: `auth/user/account`,
+    component: AccountComponent,
    }
 ];
 

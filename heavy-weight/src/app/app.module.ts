@@ -20,6 +20,8 @@ import { SaleComponent } from './main/sale/sale.component';
 import { BestSellersComponent } from './main/best-sellers/best-sellers.component';
 import { CartComponent } from './main/cart/cart.component';
 import { ProductDisplayComponent } from './main/product-display/product-display.component';
+import { NewArrivalsComponent } from './main/new-arrivals/new-arrivals.component';
+import { AccountComponent } from './main/account/account.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +40,15 @@ import { ProductDisplayComponent } from './main/product-display/product-display.
     BestSellersComponent,
     CartComponent,
     ProductDisplayComponent,
+    NewArrivalsComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterOutlet,
-    RouterModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
