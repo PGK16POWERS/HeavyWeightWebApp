@@ -1,0 +1,80 @@
+#main-app-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+#main-app-section .main-app-container {
+    max-width: 900px;
+    width: 100%;
+    padding: 0 1rem 0;
+}
+
+.main-app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.full-width-image-div {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+}
+
+.center-content-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding:  1rem;
+}
+
+.about-sect-cont-header {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000A16;
+    text-align: center;
+}
+
+.about-sect-cont-para {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000A16;
+    text-align: center;
+    max-width: 550px;
+}
+
+.cont-right-div, .cont-left-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+    gap: 2rem;
+}
+
+.cont-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cont-image-div {
+    width: 100%;
+    height: 100%;
+    background-color: #000A16;
+}
+
+.cont-right-div .about-sect-cont-header,
+.cont-right-div .about-sect-cont-para,
+.cont-left-div .about-sect-cont-header,
+.cont-left-div .about-sect-cont-para {
+    text-align: start;
+}
+
+.cont-right-div .about-sect-cont-para,
+.cont-left-div .about-sect-cont-para {
+    max-width: 400px;
+}

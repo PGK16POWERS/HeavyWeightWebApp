@@ -1,0 +1,199 @@
+#main-app-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+#main-app-section .main-app-container {
+    max-width: 900px;
+    width: 100%;
+    padding: 2rem 1rem 1rem;
+}
+
+.section-header {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.content-para {
+    font-size: 10px;
+    color: #969696;
+    font-weight: 400;
+}
+
+.head-content-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.line-divider {
+    height: 2px;
+    z-index: 99;
+    width: 100%;
+    background-color: #EEEEEE;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    visibility: visible;
+}
+
+.filter-headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-header {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+}
+
+.product-plot {
+    position: relative;
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.product {
+    max-width: calc( 25% - 16px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.prod-img-div {
+    width: 100%;
+    height: 230px;
+    background-color: black;
+}
+
+.prduct-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.brand-name {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.product-name {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.product-price {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sort-floating-menu {
+    position: absolute;
+    padding: 10px;
+    width: 160px;
+    border: 0 solid transparent;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 4px #2c2b2be7;
+}
+
+#sort-floating-title {
+    text-align: right;
+}
+
+.sort-link {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition-duration: 0.05s;
+}
+
+.sort-link:hover,
+.sort-link:active {
+    font-weight: 500;
+}
+
+.filter-floating-menu {
+    position: absolute;
+    background-color: white;
+    box-shadow: 1px 1px 4px #2c2b2be7;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 250px;
+    display: none;
+    flex-direction: column;
+}
+
+.filter-div-head {
+    padding: 20px 16px;
+    border-bottom: 2px solid #DbDBDb;
+}
+
+.filter-div-menu {
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.filter-head-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.filter-div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ul li .checkbox {
+    height: auto;
+}
+
+.filter-opt {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@media (max-width: 900px) {
+    #main-app-section .main-app-container {
+        padding: 1rem;
+    }
+
+    .product {
+        width: calc( 50% - 16px);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+}
