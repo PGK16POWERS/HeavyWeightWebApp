@@ -1,1 +1,114 @@
-<p>new-arrivals works!</p>
+<section id="main-app-section">
+    <div id="filter-div">
+
+    </div>
+
+    <app-app-header></app-app-header>
+
+    <div class="main-app-container">
+
+        <div class="head-content-div">
+            <span class="section-header">
+                NEW ARRIVALS
+            </span>
+            <p class="content-para">
+                Discover the latest arrivals at Heavy Weight, your destination for menswear, streetwear, and sneakers
+                from leading global brands, Alongside our own label, explore our curated collection designed to elevate
+                yopur everyday experience and style. Explore ourr newest additions and elevate your wardrobe with Heavy Weight
+            </p>
+        </div>
+
+        <div class="line-divider"></div>
+
+        <div class="filter-headers">
+            <span class="filter-header" id="floating-filter-div">Show Filters</span>
+            <span class="filter-header" id="sort-floating-title">Sort: {{SortConfig}}</span>
+        </div>
+
+        <div class="product-plot" id="product-plot">
+
+            <div  class="filter-floating-menu">
+
+                <div class="filter-div-head">
+                    <span class="filter-head-title">Filter options</span>
+                </div>
+
+                <div class="filter-div-menu">
+
+                    <div class="filter-div">
+
+                        <span class="filter-type">Color</span>
+
+                        <ul>
+
+                            <li>
+                                <input type="checkbox" class="checkbox" name="black">
+                                <span class="filter-opt">Black</span>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" class="checkbox" name="Grey">
+                                <span class="filter-opt">Grey</span>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" class="checkbox" name="Ash">
+                                <span class="filter-opt">Ash</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="filter-div">
+                        <span class="filter-type">Price Range</span>
+
+                        <ul>
+
+                            <li>
+                                <input type="checkbox" class="checkbox" name="black">
+                                <span class="filter-opt">Lowest first</span>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" class="checkbox" name="Grey">
+                                <span class="filter-opt">Highest first</span>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" class="checkbox" name="Ash">
+                                <span class="filter-opt">Newest</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="sort-floating-menu">
+                <span class="sort-link">Accessories</span>
+                <span class="sort-link">Head wear</span>
+                <span class="sort-link">Shirts</span>
+                <span class="sort-link">Bottoms</span>
+                <span class="sort-link">Bags</span>
+            </div>
+
+            <div *ngFor="let product of products" class="product">
+                <div class="prod-img-div"></div>
+
+                <div class="prduct-details">
+                    <span class="brand-name">{{product.brandName}}</span>
+                    <span class="product-name">{{product.productName}}</span>
+                    <span class="product-price">R {{product.productPrice}}</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
