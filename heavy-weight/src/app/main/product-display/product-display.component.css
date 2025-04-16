@@ -1,0 +1,39 @@
+#main-app-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    height: auto;
+}
+
+#main-app-section .main-app-container {
+    max-width: 900px;
+    width: 100%;
+    padding: 2rem 1rem 1rem;
+}
+
+.section-header {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.content-para {
+    font-size: 10px;
+    color: #969696;
+    font-weight: 400;
+}
+
+.head-content-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.line-divider {
+    height: 2px;
+    z-index: 99;
+    width: 100%;
+    background-color: #EEEEEE;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    visibility: visible;
+}
