@@ -17,7 +17,6 @@ import { AboutComponent } from './public-web-page/about/about.component';
 import { CheckoutComponent } from './main/checkout/checkout.component';
 import { FeaturesComponent } from './public-web-page/features/features.component';
 import { SaleComponent } from './main/sale/sale.component';
-import { BestSellersComponent } from './main/best-sellers/best-sellers.component';
 import { CartComponent } from './main/cart/cart.component';
 import { ProductDisplayComponent } from './main/product-display/product-display.component';
 import { NewArrivalsComponent } from './main/new-arrivals/new-arrivals.component';
@@ -37,7 +36,6 @@ import { AccountComponent } from './main/account/account.component';
     FeaturesComponent,
     CheckoutComponent,
     SaleComponent,
-    BestSellersComponent,
     CartComponent,
     ProductDisplayComponent,
     NewArrivalsComponent,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     styleUrl: './app.component.css',
     standalone: false
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'heavy-weight';
 
   ngAfterViewInit(): void {
@@ -21,6 +21,13 @@ export class AppComponent {
       setTimeout(() => splash.remove(), 900); // Optionally, add a fade-out effect
     }
 
+  }
+
+  ngOnInit(): void {
+    // SET MIN HEIGHT TO FULL SIZE
+    const mainAppFrame = document.querySelector(".main-app-frame") as HTMLElement;
+    const screenHeight = document.body.clientHeight
+    mainAppFrame.style.minHeight = screenHeight + "px"
   }
   
 }

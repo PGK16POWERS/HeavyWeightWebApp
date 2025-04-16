@@ -8,7 +8,6 @@ import { authGuard } from './auth.guard';
 import { AboutComponent } from './public-web-page/about/about.component';
 import { CheckoutComponent } from './main/checkout/checkout.component';
 import { FeaturesComponent } from './public-web-page/features/features.component';
-import { BestSellersComponent } from './main/best-sellers/best-sellers.component';
 import { SaleComponent } from './main/sale/sale.component';
 import { CartComponent } from './main/cart/cart.component';
 import { NewArrivalsComponent } from './main/new-arrivals/new-arrivals.component';
@@ -64,11 +63,6 @@ const routes: Routes = [
     title: 'Heavy Weight | Sale',
     path: `auth/user/sale`,
     component: SaleComponent,
-   },
-   {
-    title: 'Heavy Weight | Best sellers',
-    path: `auth/user/best-sellers`,
-    component: BestSellersComponent,
    },
    {
     title: 'Heavy Weight | Cart',
