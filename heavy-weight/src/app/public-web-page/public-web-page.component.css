@@ -1,6 +1,7 @@
 .parent-content-section {
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 
 .content-section {
