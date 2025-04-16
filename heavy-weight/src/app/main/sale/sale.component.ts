@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sale',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './sale.component.html',
   styleUrl: './sale.component.css'
 })
-export class SaleComponent {
+export class SaleComponent implements OnInit {
   SortConfig = "Recommended";
   headerConfig = "Heavy Weight";
 
@@ -54,4 +54,11 @@ export class SaleComponent {
       productPrice: 550
     }
   ];
+
+  ngOnInit(): void {
+      // HEIGHT OPERATIONS
+      const mainAppSection = document.querySelector("#main-app-section") as HTMLElement;
+      const bodyHeight = document.body.clientHeight;
+      mainAppSection.style.minHeight = bodyHeight + "px";
+  }
 }

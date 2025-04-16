@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-features',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './features.component.html',
   styleUrl: './features.component.css'
 })
-export class FeaturesComponent {
+export class FeaturesComponent implements OnInit {
   SortConfig = "Recommended";
   headerConfig = "Heavy Weight";
 
@@ -24,4 +24,11 @@ export class FeaturesComponent {
       productPrice: 350
     },
   ]
+
+  ngOnInit(): void {
+      // HEIGHT OPERATIONS
+      const bodyHeight = document.body.clientHeight;
+      const mainAppSection = document.querySelector("#main-app-section") as HTMLElement;
+      mainAppSection.style.minHeight = bodyHeight + "px";
+  }
 }

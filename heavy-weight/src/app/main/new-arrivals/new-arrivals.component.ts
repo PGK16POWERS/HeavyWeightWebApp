@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-arrivals',
@@ -10,6 +11,8 @@ export class NewArrivalsComponent implements OnInit {
 
   SortConfig = "Recommended";
   headerConfig = "Heavy Weight";
+
+  constructor(private router: Router) {}
 
   products = [
     {
@@ -57,7 +60,21 @@ export class NewArrivalsComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-      
+      // HEIGHT OPERATIONS
+      const bodyHeight = document.body.clientHeight;
+      const mainAppSection = document.querySelector("#main-app-section") as HTMLElement;
+      mainAppSection.style.minHeight = bodyHeight + "px";
+
+
+      // PRODUCT DISPLAY OPERATIONS
+      const individualProduct = document.querySelectorAll(".product") as NodeListOf<HTMLElement>;
+
+      individualProduct.forEach(product => {
+        product.addEventListener("click", () => {
+          this.router.navigateByUrl("")
+        })
+      })
+
   }
 
 }
