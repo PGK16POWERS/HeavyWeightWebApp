@@ -12,6 +12,7 @@ import { SaleComponent } from './main/sale/sale.component';
 import { CartComponent } from './main/cart/cart.component';
 import { NewArrivalsComponent } from './main/new-arrivals/new-arrivals.component';
 import { AccountComponent } from './main/account/account.component';
+import { ProductDisplayComponent } from './main/product-display/product-display.component';
 
 const userId = 12342341234134;
 
@@ -78,6 +79,11 @@ const routes: Routes = [
     title: 'Heavy Weight | Account',
     path: `auth/user/account`,
     component: AccountComponent,
+   },
+   {
+    title: 'Heavy Weight | Product Display',
+    path: `auth/user/product-display`,
+    component: ProductDisplayComponent,
    }
 ];
 
