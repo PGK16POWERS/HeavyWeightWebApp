@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './new-arrivals.component.html',
   styleUrl: './new-arrivals.component.css',
 })
-export class NewArrivalsComponent implements OnInit {
+export class NewArrivalsComponent implements OnInit, AfterViewInit {
 
   SortConfig = "Recommended";
   headerConfig = "Heavy Weight";
@@ -60,21 +60,23 @@ export class NewArrivalsComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+
       // HEIGHT OPERATIONS
       const bodyHeight = document.body.clientHeight;
       const mainAppSection = document.querySelector("#main-app-section") as HTMLElement;
-      mainAppSection.style.minHeight = bodyHeight + "px";
+      mainAppSection.style.minHeight = bodyHeight + "px";     
 
+  }
 
+  ngAfterViewInit(): void {
       // PRODUCT DISPLAY OPERATIONS
       const individualProduct = document.querySelectorAll(".product") as NodeListOf<HTMLElement>;
 
-      individualProduct.forEach(product => {
+      individualProduct.forEach((product:any) => {
         product.addEventListener("click", () => {
-          this.router.navigateByUrl("")
+          this.router.navigateByUrl("/auth/user/product-display");
         })
       })
-
   }
 
 }
