@@ -183,13 +183,28 @@ ul li .checkbox {
     font-weight: 400;
 }
 
+.filter-btn-div {
+    padding: 20px 16px;
+    border-top: 2px solid #DbDBDb;
+}
+
+.filter-btn {
+    background-color: #000000;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    padding: 0;
+}
+
 @media (max-width: 900px) {
+
     #main-app-section .main-app-container {
         padding: 1rem;
     }
 
     .product {
-        width: calc( 50% - 10px);
+        max-width: calc( 50% - 10px);
         display: flex;
         flex-direction: column;
         gap: 5px;
