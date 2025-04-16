@@ -49,28 +49,22 @@ export class MainComponent implements OnInit {
         link.addEventListener("click", () => {
           if (link.textContent == "Accessories") {
             this.headerConfig = "Accessories";
-            this.SortConfig = "Accessories";
-            sessionStorage.setItem("SortState", "Accessories");
+            sessionStorage.setItem("FilterState", "Accessories");
           } else if(link.textContent == "Recommended") {
-            this.SortConfig = "Recommended";
             this.headerConfig = "Heavy Weight";
-            sessionStorage.setItem("SortState", "Recommended");
+            sessionStorage.setItem("FilterState", "Recommended");
           } else if (link.textContent == "Head wear"){
-            this.SortConfig = "Head wear";
             this.headerConfig = "Head wear";
-            sessionStorage.setItem("SortState", "Head wear");
+            sessionStorage.setItem("FilterState", "Head wear");
           } else if (link.textContent =="Shirts") {
-            this.SortConfig = "Shirts";
             this.headerConfig = "Shirts";
-            sessionStorage.setItem("SortState", "Shirts");
+            sessionStorage.setItem("FilterState", "Shirts");
           } else if (link.textContent == "Bottoms") {
-            this.SortConfig = "Bottoms";
             this.headerConfig = "Bottoms";
-            sessionStorage.setItem("SortState", "Bottoms");
+            sessionStorage.setItem("FilterState", "Bottoms");
           } else if (link.textContent == "Bags") {
-            this.SortConfig = "Bags";
             this.headerConfig = "Bags";
-            sessionStorage.setItem("SortState", "Bags");
+            sessionStorage.setItem("FilterState", "Bags");
           }
         });
       });
@@ -102,20 +96,21 @@ export class MainComponent implements OnInit {
 
       });
 
-    // FILTER BUTTON OPERATIONS
-    const filterButton = document.querySelector("#filter-btn") as HTMLButtonElement;
 
+    // HEIGHT OPERATIONS
+    const bodyHeight = document.body.clientHeight
+    const mainAppSection = document.querySelector("#main-app-section") as HTMLElement;
+    mainAppSection.style.minHeight = bodyHeight + "px"
 
 
   }
 
   checkSortState() {
 
-    const sortState = sessionStorage.getItem("SortState");
+    const filterState = sessionStorage.getItem("FilterState");
     
     // ACCESS HEADER AND SORT TITLE
-    this.SortConfig = sortState || 'Recommended';
-    this.headerConfig = sortState || 'Recommended';
+    this.headerConfig = filterState || 'Recommended';
 
   }
 
@@ -221,6 +216,7 @@ export class MainComponent implements OnInit {
   applyFilter() {
     if (this.selectedColors.length == 0) {
       this.filteredProducts = [...this.products]
+      this.SortConfig = "Recommended";
     } else {
       this.filteredProducts = this.products.filter(product =>
         this.selectedColors.includes(product.color.toLowerCase())
@@ -239,9 +235,16 @@ export class MainComponent implements OnInit {
     
   }
 
-  applyPriceFilter(option : string) {
-    if (option == "low") {
+  applyPriceSort(option: string) {
+    if (option === 'low') {
       this.filteredProducts.sort((a, b) => a.productPrice - b.productPrice);
+      this.SortConfig = "Lowest first"
+    } else if (option === 'high') {
+      this.filteredProducts.sort((a, b) => b.productPrice - a.productPrice);
+      this.SortConfig = " Highest first"
+    } else if (option === 'new') {
+      // Optional: sort by newest — assuming newest items are at the bottom
+      this.filteredProducts = [...this.products]; // Just trigger a refresh
     }
   }
 
