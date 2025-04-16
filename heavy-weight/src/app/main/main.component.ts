@@ -14,12 +14,14 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
 
-      // SORT FUNCTIONALITY
-      const sortTitle = document.querySelector("#sort-floating-title") as HTMLElement;
-      const sortFloatingDiv = document.querySelector(".sort-floating-menu") as HTMLElement;
-      const sortLinks = document.querySelectorAll(".sort-link") as NodeListOf<HTMLElement>;
+    this.checkSortState();
 
-      let flag = false
+    // SORT FUNCTIONALITY
+    const sortTitle = document.querySelector("#sort-floating-title") as HTMLElement;
+    const sortFloatingDiv = document.querySelector(".sort-floating-menu") as HTMLElement;
+    const sortLinks = document.querySelectorAll(".sort-link") as NodeListOf<HTMLElement>;
+
+    let flag = false
 
       sortTitle.addEventListener("click", (event) => {
         event.stopPropagation();
@@ -41,37 +43,43 @@ export class MainComponent implements OnInit {
           flag = false
         }
 
-      })
+      });
 
       sortLinks.forEach(link => {
         link.addEventListener("click", () => {
           if (link.textContent == "Accessories") {
             this.headerConfig = "Accessories";
             this.SortConfig = "Accessories";
+            sessionStorage.setItem("SortState", "Accessories");
           } else if(link.textContent == "Recommended") {
             this.SortConfig = "Recommended";
             this.headerConfig = "Heavy Weight";
+            sessionStorage.setItem("SortState", "Recommended");
           } else if (link.textContent == "Head wear"){
             this.SortConfig = "Head wear";
             this.headerConfig = "Head wear";
+            sessionStorage.setItem("SortState", "Head wear");
           } else if (link.textContent =="Shirts") {
             this.SortConfig = "Shirts";
             this.headerConfig = "Shirts";
+            sessionStorage.setItem("SortState", "Shirts");
           } else if (link.textContent == "Bottoms") {
             this.SortConfig = "Bottoms";
             this.headerConfig = "Bottoms";
+            sessionStorage.setItem("SortState", "Bottoms");
           } else if (link.textContent == "Bags") {
             this.SortConfig = "Bags";
             this.headerConfig = "Bags";
+            sessionStorage.setItem("SortState", "Bags");
           }
         });
       });
 
-      // FILTER OPERATIONS
-      const filterTitle = document.querySelector("#floating-filter-div") as HTMLElement;
-      const filterFloatingDiv = document.querySelector(".filter-floating-menu") as HTMLElement;
+    // FILTER OPERATIONS
+    const filterTitle = document.querySelector("#floating-filter-div") as HTMLElement;
+    const filterFloatingDiv = document.querySelector(".filter-floating-menu") as HTMLElement;
 
-      let filterFlag = false;
+    let filterFlag = false;
 
       filterTitle.addEventListener("click", (event) => {
         event.stopPropagation();
@@ -92,8 +100,22 @@ export class MainComponent implements OnInit {
           filterFlag = false;
         }
 
-      })
+      });
 
+    // FILTER BUTTON OPERATIONS
+    const filterButton = document.querySelector("#filter-btn") as HTMLButtonElement;
+
+
+
+  }
+
+  checkSortState() {
+
+    const sortState = sessionStorage.getItem("SortState");
+    
+    // ACCESS HEADER AND SORT TITLE
+    this.SortConfig = sortState || 'Recommended';
+    this.headerConfig = sortState || 'Recommended';
 
   }
 
@@ -102,75 +124,125 @@ export class MainComponent implements OnInit {
       productImageUrl: 'scooby-do-1.jpg',
       brandName: 'Heavy Weight',
       productName: 'Denim Genuine Tacker Jacket Black',
-      productPrice: 500
+      color: 'black',
+      productPrice: 500,
+      category: 'Accessories'
     },
     {
       productImageUrl: 'scooby-do-2.jpg',
       brandName: 'Heavy Weight',
       productName: 'Signature Cargo Pants Olive',
-      productPrice: 350
+      color: 'black',
+      productPrice: 350,
+      category: 'Accessories'
     },
     {
       productImageUrl: 'scooby-do-3.jpg',
       brandName: 'Heavy Weight',
       productName: 'Oversized Hoodie Ash Grey',
-      productPrice: 420
+      color: 'black',
+      productPrice: 420,
+      category: 'Head wear'
     },
     {
       productImageUrl: 'scooby-do-4.jpg',
       brandName: 'Heavy Weight',
       productName: 'Heavyweight Knit Sweater Navy',
-      productPrice: 480
+      color: 'ash',
+      productPrice: 480,
+      category: 'Head wear'
     },
     {
       productImageUrl: 'scooby-do-5.jpg',
       brandName: 'Heavy Weight',
       productName: 'Tactical Bomber Jacket Sand',
-      productPrice: 600
+      color: 'ash',
+      productPrice: 600,
+      category: 'Shirts'
     },
     {
       productImageUrl: 'scooby-do-6.jpg',
       brandName: 'Heavy Weight',
       productName: 'Utility Denim Jeans Indigo',
-      productPrice: 370
+      color: 'ash',
+      productPrice: 370,
+      category: 'Shirts'
     },
     {
       productImageUrl: 'scooby-do-7.jpg',
       brandName: 'Heavy Weight',
       productName: 'Embroidered Logo Tee Black',
-      productPrice: 200
+      color: 'grey',
+      productPrice: 200,
+      category: 'Shirts'
     },
     {
       productImageUrl: 'scooby-do-8.jpg',
       brandName: 'Heavy Weight',
       productName: 'Puffer Vest Arctic White',
-      productPrice: 450
+      color: 'grey',
+      productPrice: 450,
+      category: 'Bottoms'
     },
     {
       productImageUrl: 'scooby-do-9.jpg',
       brandName: 'Heavy Weight',
       productName: 'Loose Fit Sweatpants Charcoal',
-      productPrice: 300
+      color: 'grey',
+      productPrice: 300,
+      category: 'Bags'
     },
     {
       productImageUrl: 'scooby-do-10.jpg',
       brandName: 'Heavy Weight',
       productName: 'Heavyweight Fleece Jacket Forest Green',
-      productPrice: 550
+      color: 'grey',
+      productPrice: 550,
+      category: 'Bottoms'
     }
   ];
-  
 
-  /* 
-    <div class="product">
-    <div class="prod-img-div"></div>
+  filteredProducts = [...this.products]
 
-    <div class="prduct-details">
-        <span class="brand-name">Heavy Weight</span>
-        <span class="product-name">Denim Genuine Tacker Jacket Black</span>
-        <span class="product-price">R500</span>
-    </div>
-    </div>
-  */
+  selectedColors: string[] = []
+
+  handleCheckBoxChange (event: any) {
+    const checkbox = event.target;
+    const value = checkbox.name.toLowerCase();
+
+    if (checkbox.checked) {
+      this.selectedColors.push(value)
+    } else {
+      this.selectedColors = this.selectedColors.filter(c => c !== value)
+    }
+    
+  }
+
+  applyFilter() {
+    if (this.selectedColors.length == 0) {
+      this.filteredProducts = [...this.products]
+    } else {
+      this.filteredProducts = this.products.filter(product =>
+        this.selectedColors.includes(product.color.toLowerCase())
+      );
+    }
+  }
+
+  sortFunction(category : string) {
+    if (category == 'all') {
+      this.filteredProducts = [...this.products];
+    } else {
+      this.filteredProducts = this.products.filter(product => 
+        product.category === category
+      );
+    }
+    
+  }
+
+  applyPriceFilter(option : string) {
+    if (option == "low") {
+      this.filteredProducts.sort((a, b) => a.productPrice - b.productPrice);
+    }
+  }
 
 }
