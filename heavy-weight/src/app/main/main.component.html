@@ -61,24 +61,14 @@
                     </div>
 
                     <div class="filter-div">
-                        <span class="filter-type">Price Range</span>
+                        <span class="filter-type">Categories</span>
 
                         <ul>
-
-                            <li>
-                                <input type="checkbox" class="checkbox" (click)="applyPriceFilter('low')" value="low">
-                                <span class="filter-opt">Lowest first</span>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" class="checkbox" value="high">
-                                <span class="filter-opt">Highest first</span>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" class="checkbox" value="new">
-                                <span class="filter-opt">Newest</span>
-                            </li>
+                            <span class="sort-link" (click)="sortFunction('Accessories')">Accessories</span>
+                            <span class="sort-link" (click)="sortFunction('Head wear')">Head wear</span>
+                            <span class="sort-link" (click)="sortFunction('Shirts')">Shirts</span>
+                            <span class="sort-link" (click)="sortFunction('Bottoms')">Bottoms</span>
+                            <span class="sort-link" (click)="sortFunction('Bags')">Bags</span>
 
                         </ul>
 
@@ -93,12 +83,13 @@
             </div>
 
             <div class="sort-floating-menu">
-                <span class="sort-link" (click)="sortFunction('all')">All</span>
-                <span class="sort-link" (click)="sortFunction('Accessories')">Accessories</span>
-                <span class="sort-link" (click)="sortFunction('Head wear')">Head wear</span>
-                <span class="sort-link" (click)="sortFunction('Shirts')">Shirts</span>
-                <span class="sort-link" (click)="sortFunction('Bottoms')">Bottoms</span>
-                <span class="sort-link" (click)="sortFunction('Bags')">Bags</span>
+                
+                <span class="filter-opt" (click)="applyPriceSort('low')">Lowest first</span>
+               
+                <span class="filter-opt" (click)="applyPriceSort('high')">Highest first</span>
+              
+                <span class="filter-opt" (click)="applyPriceSort('new')">Newest</span>
+                
             </div>
 
             <div *ngFor="let product of filteredProducts" class="product">
