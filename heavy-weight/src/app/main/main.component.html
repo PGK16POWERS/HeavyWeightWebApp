@@ -42,17 +42,17 @@
                         <ul>
 
                             <li>
-                                <input type="checkbox" class="checkbox" name="black">
+                                <input type="checkbox" class="checkbox" name="black" (change)="handleCheckBoxChange($event)">
                                 <span class="filter-opt">Black</span>
                             </li>
 
                             <li>
-                                <input type="checkbox" class="checkbox" name="Grey">
+                                <input type="checkbox" class="checkbox" name="Grey" (change)="handleCheckBoxChange($event)">
                                 <span class="filter-opt">Grey</span>
                             </li>
 
                             <li>
-                                <input type="checkbox" class="checkbox" name="Ash">
+                                <input type="checkbox" class="checkbox" name="Ash" (change)="handleCheckBoxChange($event)">
                                 <span class="filter-opt">Ash</span>
                             </li>
 
@@ -66,17 +66,17 @@
                         <ul>
 
                             <li>
-                                <input type="checkbox" class="checkbox" name="black">
+                                <input type="checkbox" class="checkbox" (click)="applyPriceFilter('low')" value="low">
                                 <span class="filter-opt">Lowest first</span>
                             </li>
 
                             <li>
-                                <input type="checkbox" class="checkbox" name="Grey">
+                                <input type="checkbox" class="checkbox" value="high">
                                 <span class="filter-opt">Highest first</span>
                             </li>
 
                             <li>
-                                <input type="checkbox" class="checkbox" name="Ash">
+                                <input type="checkbox" class="checkbox" value="new">
                                 <span class="filter-opt">Newest</span>
                             </li>
 
@@ -86,17 +86,22 @@
 
                 </div>
 
+                <div class="filter-btn-div">
+                    <button type="button" class="filter-btn" id="filter-btn" (click)="applyFilter()">Apply</button>
+                </div>
+
             </div>
 
             <div class="sort-floating-menu">
-                <span class="sort-link">Accessories</span>
-                <span class="sort-link">Head wear</span>
-                <span class="sort-link">Shirts</span>
-                <span class="sort-link">Bottoms</span>
-                <span class="sort-link">Bags</span>
+                <span class="sort-link" (click)="sortFunction('all')">All</span>
+                <span class="sort-link" (click)="sortFunction('Accessories')">Accessories</span>
+                <span class="sort-link" (click)="sortFunction('Head wear')">Head wear</span>
+                <span class="sort-link" (click)="sortFunction('Shirts')">Shirts</span>
+                <span class="sort-link" (click)="sortFunction('Bottoms')">Bottoms</span>
+                <span class="sort-link" (click)="sortFunction('Bags')">Bags</span>
             </div>
 
-            <div *ngFor="let product of products" class="product">
+            <div *ngFor="let product of filteredProducts" class="product">
                 <div class="prod-img-div"></div>
 
                 <div class="prduct-details">
@@ -111,4 +116,4 @@
 
     </div>
 
-</section>
+</section> 
