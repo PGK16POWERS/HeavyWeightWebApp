@@ -3,7 +3,8 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #000000;
-    padding: 20px;
+    padding: 14px;
+    width: 100vw
 }
 
 .brand-logo {
@@ -77,19 +78,21 @@ header {
 }
 
 .menu-bar .bar {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF6b;
     height: 3px;
     width: 30px;
     border: 0 solid transparent;
     border-radius: 100px;
+    transition-duration: 0.3s;
+    cursor: pointer;
 }
 
 .menu-bar .bar:nth-child(2) {
-    width: 20px;
+    width: 16px;
 }
 
 .menu-bar .bar:nth-child(3) {
-    width: 10px;
+    width: 23px;
 }
 
 /* MENU BAR STYLES */

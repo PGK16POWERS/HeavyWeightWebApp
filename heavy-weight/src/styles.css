@@ -101,11 +101,17 @@ button {
 .white-button {
     background-color: #FFFFFF;
     color: #000000;
+    font-size: 12px;
+    height: 45px;
 }
 
 .standard-black-btn {
-    background-color: #000000;
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    border-radius: 0;
     color: #FFFFFF;
+    height: 45px;
+    font-size: 12px;
 }
 
 button:disabled {
