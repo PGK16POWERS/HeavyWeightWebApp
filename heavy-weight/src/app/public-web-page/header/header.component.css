@@ -4,7 +4,9 @@ header {
     align-items: center;
     background-color: #000000;
     padding: 14px;
-    width: 100vw
+    width: 100vw;
+    position: sticky;
+    top: 0;
 }
 
 .brand-logo {
