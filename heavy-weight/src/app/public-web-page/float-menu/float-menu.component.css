@@ -1,0 +1,21 @@
+.floating-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+    right: 0;
+    width: 85%;
+    transition-duration: 0.5s;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.fd-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px;
+    border: 0 solid transparent;
+    border-bottom: 1px solid #595959;
+}

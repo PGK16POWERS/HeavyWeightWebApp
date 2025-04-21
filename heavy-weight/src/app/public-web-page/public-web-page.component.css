@@ -10,9 +10,11 @@
 }
 
 #hero-section {
-    background-image: url(/2.png);
+    position: relative;
+    background-color: #000000;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 10px;    
     justify-content: center;
     align-items: center;
@@ -58,6 +60,33 @@
     max-width: 900px;
     width: 100%;
 }
+
+.image-progress-bar-parent {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    bottom: 16px;
+}
+
+.progress-bar {
+    height: 4px;
+    width: 65px;
+    background-color: rgba(166, 166, 166, 0.505);
+    border: 0 solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress-fill {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    transition: width 5s linear;
+  }
 
 /*  HEADER STYLES */
 
@@ -145,7 +174,7 @@ header {
 }
 
 .menu-bar .bar {
-    background-color: #FFFFFF6b;
+    background-color: #ffffff;
     height: 3px;
     width: 30px;
     border: 0 solid transparent;
@@ -204,12 +233,15 @@ header {
     flex-direction: column;
     gap: 10px;
     width: calc(25% - 1rem);
+    cursor: pointer;
 }
 
 .product-image-container {
     width: 100%;
     height: 250px;
     background-color: #000000;
+    overflow: hidden; /* This is the key */
+    position: relative;
 }
 
 .product-details-container {
@@ -237,6 +269,12 @@ header {
 .product-image {
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Makes sure the image fills the space nicely */
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.1);
 }
 
 /* RECOMMENDED SECTION */
@@ -279,6 +317,7 @@ header {
     width: 100%;
     max-width: 350px;
     height: 100%;
+    cursor: pointer;
 }
 
 .feature-details-container {
@@ -292,6 +331,8 @@ header {
     width: 100%;
     height: 330px;
     background-color: #000000;
+    overflow: hidden; /* This is the key */
+    position: relative;
 }
 
 #feature-name {
@@ -317,9 +358,10 @@ header {
 /* COLLABORATION SECTION */
 
 #collaboration-section {
-    background-image: url(/1.png);
+    background-image: url(/products/page-2.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 10px;    
     justify-content: center;
     align-items: center;
@@ -387,7 +429,7 @@ header {
 }
 
 .image-side {
-    background-image: url(/8.png);
+    background-image: url(/products/CTA-IMAGE.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
@@ -478,7 +520,7 @@ header {
     /* RECOMMENDED SECTION */
 
     #hero-section {
-        background-color: brown;
+        background-color: rgb(0, 0, 0);
         padding: 10px;    
         justify-content: center;
         align-items: center;
