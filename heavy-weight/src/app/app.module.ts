@@ -21,6 +21,7 @@ import { CartComponent } from './main/cart/cart.component';
 import { ProductDisplayComponent } from './main/product-display/product-display.component';
 import { NewArrivalsComponent } from './main/new-arrivals/new-arrivals.component';
 import { AccountComponent } from './main/account/account.component';
+import { FloatMenuComponent } from './public-web-page/float-menu/float-menu.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AccountComponent } from './main/account/account.component';
     CartComponent,
     ProductDisplayComponent,
     NewArrivalsComponent,
-    AccountComponent
+    AccountComponent,
+    FloatMenuComponent
   ],
   imports: [
     BrowserModule,
