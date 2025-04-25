@@ -1,0 +1,36 @@
+.floating-div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    background-color: #FFFFFF;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.floating-div.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.fd-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px;
+    border: 0 solid transparent;
+    border-bottom: 1px solid #595959;
+}
+
+.floating-nav-link {
+    color: #000000;
+}
