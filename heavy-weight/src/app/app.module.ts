@@ -22,6 +22,7 @@ import { ProductDisplayComponent } from './main/product-display/product-display.
 import { NewArrivalsComponent } from './main/new-arrivals/new-arrivals.component';
 import { AccountComponent } from './main/account/account.component';
 import { FloatMenuComponent } from './public-web-page/float-menu/float-menu.component';
+import { MainFloatingMenuComponent } from './main/main-floating-menu/main-floating-menu.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FloatMenuComponent } from './public-web-page/float-menu/float-menu.comp
     ProductDisplayComponent,
     NewArrivalsComponent,
     AccountComponent,
-    FloatMenuComponent
+    FloatMenuComponent,
+    MainFloatingMenuComponent
   ],
   imports: [
     BrowserModule,
