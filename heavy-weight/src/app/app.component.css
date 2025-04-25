@@ -10,7 +10,7 @@
     justify-content: center;
 }
 
-span {
+.news-header-title {
     color: white;
     font-size: 12px;
 }
