@@ -270,8 +270,8 @@
                     </span>
 
                     <form #newsletter="ngForm" (ngSubmit)="subscribeNewsletter()" method="post" action="/subscribe/mail-list" class="mail-form">
-                        <input type="email" class="mail-inp" name="email" id="email-id" [(ngModel)]="newsletterModel.email" email #emailInp="ngModel" placeholder="Enter your email">
-                        <button type="submit" class="standard-black-btn" [disabled]="!newsletter.invalid">Join</button>
+                        <input type="email" class="mail-inp" name="email" id="email-id" [(ngModel)]="newsletterModel.email" email #emailInp="ngModel" required="true"placeholder="Enter your email">
+                        <button type="submit" class="standard-black-btn" [disabled]="emailInp.invalid || emailInp.pristine">Join</button>
                     </form>
                 </div>
             </div>
