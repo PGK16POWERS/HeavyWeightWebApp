@@ -46,5 +46,53 @@ export class ProductDisplayComponent implements OnInit {
           detInfo.style.display = "flex";
         }
       });
+
+      hideDetcIcon.addEventListener("click", () => {
+        if (showDetIcon.style.display = "none") {
+          hideDetcIcon.style.display = "none";
+          showDetIcon.style.display = "flex";
+          detInfo.style.display = "none";
+        }
+      });
+
+      const showRetPol = document.querySelector("#") as HTMLElement;
+      const hideRetPol = document.querySelector("#") as HTMLElement;
+      const returnPolicy = document.querySelector("#") as HTMLElement;
+
+      showRetPol.addEventListener("click", () => {
+        if(hideRetPol.style.display = "none") {
+          showRetPol.style.display = "none";
+          hideRetPol.style.display = "flex";
+          returnPolicy.style.display = "flex";
+        }
+      });
+
+      hideRetPol.addEventListener("click", () => {
+        if(showRetPol.style.display = "none") {
+          showRetPol.style.display = "flex";
+          showRetPol.style.display = "none";
+          returnPolicy.style.display = "none";
+        }
+      });
+
+      const showWornWithIcon = document.querySelector("#") as HTMLElement;
+      const hideWornWithIcon = document.querySelector("#") as HTMLElement;
+      const wornWith = document.querySelector("#") as HTMLElement;
+
+      showWornWithIcon.addEventListener("click", () => {
+        if (hideWornWithIcon.style.display = "none") {
+          showWornWithIcon.style.display = "none";
+          hideWornWithIcon.style.display = "flex";
+          wornWith.style.display = "flex";
+        }
+      })
+
+      hideWornWithIcon.addEventListener("click", () => {
+        if (showWornWithIcon.style.display = "none") {
+          showWornWithIcon.style.display = "flex";
+          hideWornWithIcon.style.display = "none";
+          wornWith.style.display = "none";
+        }
+      })
   }
 }
