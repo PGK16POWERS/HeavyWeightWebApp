@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sale',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './sale.component.css'
 })
 export class SaleComponent implements OnInit {
+
+  constructor(private router : Router) {}
+
   SortConfig = "Recommended";
   headerConfig = "Heavy Weight";
 
@@ -79,4 +83,16 @@ export class SaleComponent implements OnInit {
       }
     });
   }
+
+  ngAfterViewInit(): void {
+    // PRODUCT DISPLAY OPERATIONS
+    const individualProduct = document.querySelectorAll(".product") as NodeListOf<HTMLElement>;
+
+    individualProduct.forEach((product:any) => {
+      product.addEventListener("click", () => {
+        this.router.navigateByUrl("/auth/user/product-display");
+      })
+    })
+  }
+
 }

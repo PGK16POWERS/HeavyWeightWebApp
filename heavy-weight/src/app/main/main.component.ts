@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './main.component.css'
 })
 export class MainComponent implements OnInit {
+
+  constructor (private router : Router){}
 
   SortConfig = "Recommended";
   headerConfig = "Heavy Weight";
@@ -263,6 +266,17 @@ export class MainComponent implements OnInit {
       // Optional: sort by newest — assuming newest items are at the bottom
       this.filteredProducts = [...this.products]; // Just trigger a refresh
     }
+  }
+
+  ngAfterViewInit(): void {
+    // PRODUCT DISPLAY OPERATIONS
+    const individualProduct = document.querySelectorAll(".product") as NodeListOf<HTMLElement>;
+
+    individualProduct.forEach((product:any) => {
+      product.addEventListener("click", () => {
+        this.router.navigateByUrl("/auth/user/product-display");
+      })
+    })
   }
 
 }
