@@ -478,7 +478,7 @@ header {
 
 .mail-inp:active,
 .mail-inp:focus {
-    border: 0 solid transparent;
+    outline: 0 solid transparent;
 }
 
 .mail-form {
@@ -489,6 +489,12 @@ header {
     grid-template-areas:  
     "a b";
     gap: 10px;
+}
+
+#cta-section .standard-black-btn {
+    background-color: #000000;
+    color: #FFFFFF;
+    height: 100%;
 }
 
 .standard-black-btn:disabled {

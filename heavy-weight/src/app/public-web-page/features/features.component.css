@@ -190,7 +190,7 @@ ul li .checkbox {
     }
 
     .product {
-        width: calc( 50% - 16px);
+        max-width: calc( 50% - 10px);
         display: flex;
         flex-direction: column;
         gap: 5px;
