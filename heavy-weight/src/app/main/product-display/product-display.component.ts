@@ -55,9 +55,9 @@ export class ProductDisplayComponent implements OnInit {
         }
       });
 
-      const showRetPol = document.querySelector("#") as HTMLElement;
-      const hideRetPol = document.querySelector("#") as HTMLElement;
-      const returnPolicy = document.querySelector("#") as HTMLElement;
+      const showRetPol = document.querySelector("#show-ret-pol") as HTMLElement;
+      const hideRetPol = document.querySelector("#hide-ret-pol") as HTMLElement;
+      const returnPolicy = document.querySelector("#return-policy") as HTMLElement;
 
       showRetPol.addEventListener("click", () => {
         if(hideRetPol.style.display = "none") {
@@ -70,14 +70,14 @@ export class ProductDisplayComponent implements OnInit {
       hideRetPol.addEventListener("click", () => {
         if(showRetPol.style.display = "none") {
           showRetPol.style.display = "flex";
-          showRetPol.style.display = "none";
+          hideRetPol.style.display = "none";
           returnPolicy.style.display = "none";
         }
       });
 
-      const showWornWithIcon = document.querySelector("#") as HTMLElement;
-      const hideWornWithIcon = document.querySelector("#") as HTMLElement;
-      const wornWith = document.querySelector("#") as HTMLElement;
+      const showWornWithIcon = document.querySelector("#show-ww") as HTMLElement;
+      const hideWornWithIcon = document.querySelector("#hide-ww") as HTMLElement;
+      const wornWith = document.querySelector("#worn-with") as HTMLElement;
 
       showWornWithIcon.addEventListener("click", () => {
         if (hideWornWithIcon.style.display = "none") {
@@ -85,7 +85,7 @@ export class ProductDisplayComponent implements OnInit {
           hideWornWithIcon.style.display = "flex";
           wornWith.style.display = "flex";
         }
-      })
+      });
 
       hideWornWithIcon.addEventListener("click", () => {
         if (showWornWithIcon.style.display = "none") {
@@ -93,6 +93,6 @@ export class ProductDisplayComponent implements OnInit {
           hideWornWithIcon.style.display = "none";
           wornWith.style.display = "none";
         }
-      })
+      });
   }
 }
